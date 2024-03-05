@@ -1,8 +1,8 @@
 namespace Ledger.Pages;
 
-public partial class AddDebtors : ContentPage
+public partial class AddDebtorPage : ContentPage
 {
-	public AddDebtors()
+	public AddDebtorPage()
 	{
 		InitializeComponent();
 	}
