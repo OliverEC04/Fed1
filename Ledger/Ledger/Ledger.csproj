@@ -66,13 +66,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Pages\addDebtors.xaml">
+	  <Compile Update="Pages\AddDebtorPage.xaml.cs">
+	    <DependentUpon>AddDebtorPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\DebtorListPage.xaml.cs">
+	    <DependentUpon>DebtorListPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\MainPage.xaml.cs">
+	    <DependentUpon>MainPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Pages\AddDebtorPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\debtList.xaml">
+	  <MauiXaml Update="Pages\DebtorListPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\main.xaml">
+	  <MauiXaml Update="Pages\MainPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
