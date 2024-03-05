@@ -5,9 +5,27 @@
     x:Class="Ledger.Pages.DebtorListPage"
     Title="DebtorListPage">
     <VerticalStackLayout>
+        <!-- Add a button to go back to the main page -->
+        <!--<Button
+            Text="Back"
+            Clicked="OnBackButtonClicked"
+            Padding="40, 40, 40, 0"
+            FontSize="25"
+            />-->
+
+        <!-- Add a grid to hold info about the debtor -->
         <Label
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center"
-            HorizontalOptions="Center" />
+            Text="Name of debtor" 
+            Padding="40, 0, 0, 40"
+            FontSize="25"
+            />
+
+        <Grid ColumnDefinitions="200, 200">
+
+            <Label Text="Date" Padding="40, 0, 0, 0" FontSize="18"/>
+            <Label Text="Amount" Grid.Column="1" Padding="40, 0, 0, 0" FontSize="18"/>
+
+        </Grid>
+
     </VerticalStackLayout>
 </ContentPage>
