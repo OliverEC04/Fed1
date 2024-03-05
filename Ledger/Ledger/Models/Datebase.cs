@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Ledger.Models
 {
-	public class Debt
+	public class Datebase
 	{
+
 	}
 }

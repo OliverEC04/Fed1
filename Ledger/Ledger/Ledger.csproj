@@ -65,4 +65,16 @@
 		<PackageReference Include="SQLitePCL" Version="3.8.7.2" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="Pages\addDebtors.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\debtList.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\main.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
