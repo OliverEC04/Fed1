@@ -12,7 +12,7 @@ namespace Ledger.WinUI
     {
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
-        /// executed, and as such is the logical equivalent of MainPage() or WinMain().
+        /// executed, and as such is the logical equivalent of FrontPage() or WinMain().
         /// </summary>
         public App()
         {

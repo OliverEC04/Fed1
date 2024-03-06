@@ -73,8 +73,8 @@
 	  <Compile Update="Pages\DebtorListPage.xaml.cs">
 	    <DependentUpon>DebtorListPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Pages\MainPage.xaml.cs">
-	    <DependentUpon>MainPage.xaml</DependentUpon>
+	  <Compile Update="Pages\FrontPage.xaml.cs">
+	    <DependentUpon>FrontPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
@@ -85,7 +85,7 @@
 	  <MauiXaml Update="Pages\DebtorListPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\MainPage.xaml">
+	  <MauiXaml Update="Pages\FrontPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

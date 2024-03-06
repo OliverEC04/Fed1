@@ -4,23 +4,20 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:vm="clr-namespace:Ledger.ViewModels"
-    x:Class="Ledger.Pages.MainPage"
-    Title="MainPage">
-    <ContentPage.BindingContext>
-        <vm:MainPageViewModel/>
-    </ContentPage.BindingContext>
+    x:Class="Ledger.Pages.FrontPage"
+    Title="FrontPage">
     <Grid
         ColumnDefinitions="*, *"
         RowDefinitions="100, *">
         <Label
-            Text="Debtors"
+            Text="{Binding _text}"
             HorizontalOptions="Center"
             VerticalOptions="Center"
             FontSize="24" />
         <VerticalStackLayout
             Grid.Column="0"
             Grid.Row="1">
-            
+
         </VerticalStackLayout>
         <Button
             Grid.Column="1"
