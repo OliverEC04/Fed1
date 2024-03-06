@@ -11,7 +11,7 @@ namespace Ledger.ViewModels
 {
     public partial class DebtorListViewModel : ObservableObject
     {
-        [ObservableProperty] private List<Tuple<string, int>> ?_debtorDetails;
+        [ObservableProperty] private List<Tuple<string, int>> ?_debtorDetails; 
 
         //public DebtorListPageViewModel()
         //{
