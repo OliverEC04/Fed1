@@ -7,6 +7,6 @@ public partial class AddDebtorPage : ContentPage
 	public AddDebtorPage()
 	{
 		InitializeComponent();
-		BindingContext = new AddDebtorViewModel();
+		BindingContext = new AddDebtorViewModel(Navigation);
 	}
 }

@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:tk="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             xmlns:vm="clr-namespace:Ledger.ViewModels"
              x:Class="Ledger.Pages.AddDebtorPage"
-             x:DataType="vm:AddDebtorViewModel">
-
-    <ContentPage.BindingContext>
-        <vm:AddDebtorViewModel/>
-    </ContentPage.BindingContext>
+             Title="AddDebtorPage">
 
     <VerticalStackLayout Spacing="35" Padding="100">
         <Label Text="Add Deptor"
@@ -39,7 +33,8 @@
                     FontSize="36"
                     HorizontalOptions="Center"
                     WidthRequest="200"
-                    CornerRadius="10"/>
+                    CornerRadius="10"
+                    Command="{Binding CancelCommand}"/>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
