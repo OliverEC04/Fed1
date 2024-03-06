@@ -12,7 +12,7 @@ namespace Ledger.ViewModels
         [RelayCommand]
         public void AddDebtor()
         {
-            
+            Title = "lol";
         }
 
         public FrontPageViewModel()
