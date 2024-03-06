@@ -7,10 +7,14 @@
     x:Class="Ledger.Pages.FrontPage"
     x:DataType="vm:FrontPageViewModel"
     Title="FrontPage">
-
     <Grid
         ColumnDefinitions="*, *"
         RowDefinitions="100, *">
+        <Label
+            Text="{Binding Title}"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            FontSize="24" />
         <VerticalStackLayout
             Grid.Column="0"
             Grid.Row="1">
