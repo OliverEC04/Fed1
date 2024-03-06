@@ -5,22 +5,29 @@ namespace Ledger.ViewModels
 {
 	public partial class AddDebtorViewModel : ObservableObject
 	{
+		private readonly INavigation _navigation;
+
 		[ObservableProperty]
 		private string name;
 
 		[ObservableProperty]
 		private float initialValue;
 
-		[RelayCommand]
-		public void Save()
+		public AddDebtorViewModel(INavigation navigation)
 		{
-			// mangler dating base
+			_navigation = navigation;
 		}
 
 		[RelayCommand]
-		public void Cancel()
+		public void Save()
 		{
-			// gå tilbag
+			// Code for saving data
+		}
+
+		[RelayCommand]
+		public async void Cancel()
+		{
+			await _navigation.PopToRootAsync();
 		}
 	}
 }

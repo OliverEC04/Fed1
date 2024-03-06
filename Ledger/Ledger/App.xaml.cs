@@ -7,9 +7,7 @@ namespace Ledger
 		public App()
 		{
 			InitializeComponent();
-
-			//  MainPage = new AppShell();
-			MainPage = new Pages.AddDebtorPage(); // delete
+			MainPage = new NavigationPage(new FrontPage());
 		}
 	}
 }
