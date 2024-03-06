@@ -14,7 +14,7 @@ namespace Ledger.ViewModels
 		[RelayCommand]
 		public async void AddDebtor()
 		{
-			await Application.Current.MainPage.Navigation.PushAsync(new AddDebtorPage());
+			await Application.Current.MainPage.Navigation.PushAsync(new AddDebtorPage()); // oh ja der kom jeg
 		}
 
 
