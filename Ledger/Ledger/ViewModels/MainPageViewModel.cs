@@ -22,7 +22,7 @@ namespace Ledger.ViewModels
 
         public MainPageViewModel()
         {
-            Title = "Hello, MVVM Toolkit!";
+            
         }
     }
 }
