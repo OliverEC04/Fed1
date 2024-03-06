@@ -17,13 +17,14 @@
         <Label
             Text="Name of debtor" 
             Padding="40, 0, 0, 40"
-            FontSize="25"
+            Style="{StaticResource TitleLabelStyle}"
             />
+        <!--FontSize="25"-->
 
         <Grid ColumnDefinitions="200, 200">
 
-            <Label Text="Date" Padding="40, 0, 0, 0" FontSize="18"/>
-            <Label Text="Amount" Grid.Column="1" Padding="40, 0, 0, 0" FontSize="18"/>
+            <Label Text="Date" Padding="40, 0, 0, 0" Style="{StaticResource LedgerText}"/>
+            <Label Text="Amount" Grid.Column="1" Padding="40, 0, 0, 0" Style="{StaticResource LedgerText}"/>
 
         </Grid>
 
