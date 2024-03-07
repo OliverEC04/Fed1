@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Ledger.Pages;
 
@@ -9,7 +10,8 @@ namespace Ledger.ViewModels
 	{
 		[ObservableProperty]
 		private string _title = "Debtors";
-		private List<Tuple<string, int>> _debtors;
+        [ObservableProperty]
+        private ObservableCollection<Tuple<string, int>> _debtors;
 
 		[RelayCommand]
 		public async void AddDebtor()

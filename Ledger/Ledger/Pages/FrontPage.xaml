@@ -14,11 +14,14 @@
             Text="{Binding Title}"
             HorizontalOptions="Center"
             VerticalOptions="Center"
-            FontSize="24" />
+            Style="{StaticResource TitleLabelStyle}"/>
         <VerticalStackLayout
             Grid.Column="0"
             Grid.Row="1">
-
+            <ListView
+                BindableLayout.ItemsSource="{Binding Debtors}">
+                
+            </ListView>
         </VerticalStackLayout>
         <Button
             Grid.Column="1"
