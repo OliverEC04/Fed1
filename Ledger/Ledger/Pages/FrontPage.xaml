@@ -14,13 +14,19 @@
             Text="{Binding Title}"
             HorizontalOptions="Center"
             VerticalOptions="Center"
-            Style="{StaticResource TitleLabelStyle}"/>
+            Style="{StaticResource TitleLabelStyle}" />
         <VerticalStackLayout
             Grid.Column="0"
             Grid.Row="1">
             <ListView
-                BindableLayout.ItemsSource="{Binding Debtors}">
-                
+                ItemsSource="{Binding Debtors}">
+                <ListView.ItemTemplate>
+                    <DataTemplate
+                        x:DataType="Models:Debtor">
+                        <!--<TextCell
+                            Text="{Binding Name}" />-->
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
         </VerticalStackLayout>
         <Button
