@@ -23,4 +23,8 @@
             </VisualStateGroupList>
         </Setter>
     </Style>
+
+    <Style x:Key="GayButton">
+        <Setter></Setter>
+    </Style>
 </ResourceDictionary>
