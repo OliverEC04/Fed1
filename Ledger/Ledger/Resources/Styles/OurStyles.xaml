@@ -24,7 +24,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="GayButton">
+    <!--<Style x:Key="GayButton">
         <Setter></Setter>
-    </Style>
+    </Style>-->
 </ResourceDictionary>
