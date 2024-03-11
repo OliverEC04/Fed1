@@ -16,9 +16,10 @@
             HorizontalOptions="Center"
             VerticalOptions="Center"
             Style="{StaticResource TitleLabelStyle}" />
-        <VerticalStackLayout
+        <Frame
             Grid.Column="0"
-            Grid.Row="1">
+            Grid.Row="1"
+            Style="{StaticResource LedgerFrame}">
             <ListView
                 SelectedItem="{Binding SelectedDebtor, Mode=TwoWay}"
                 ItemsSource="{Binding Debtors}">
@@ -28,6 +29,21 @@
                         Command="{Binding SelDebtorCommand}"
                         CommandParameter="{Binding Source={RelativeSource AncestorType={x:Type ListView}}, Path=SelectedItem}" />
                 </ListView.Behaviors>
+                <ListView.Header>
+                    <Grid
+                        ColumnDefinitions="*, *">
+                        <Label
+                            Grid.Column="0"
+                            Text="Name"
+                            FontAttributes="Bold"
+                            Style="{StaticResource ListItem}" />
+                        <Label
+                            Grid.Column="1"
+                            Text="Debt"
+                            FontAttributes="Bold"
+                            Style="{StaticResource ListItem}" />
+                    </Grid>
+                </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate
                         x:DataType="models:Debtor">
@@ -36,26 +52,24 @@
                                 ColumnDefinitions="*, *">
                                 <Label
                                     Grid.Column="0"
-                                    Text="{Binding Name}" />
+                                    Text="{Binding Name}"
+                                    Style="{StaticResource ListItem}" />
                                 <Label
                                     Grid.Column="1"
-                                    Text="{Binding Debt}" />
+                                    Text="{Binding Debt}"
+                                    Style="{StaticResource ListItem}" />
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </VerticalStackLayout>
+        </Frame>
         <Button
             Grid.Column="1"
             Grid.Row="1"
             Command="{Binding AddDebtorCommand}"
-            WidthRequest="200"
-            HeightRequest="60"
             VerticalOptions="Start"
             Text="Add debtor"
-            FontSize="16"
-            BackgroundColor="#61AFEF"
-            />
+            Style="{StaticResource Button1}" />
     </Grid>
 </ContentPage>

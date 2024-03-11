@@ -88,7 +88,7 @@
 	  <MauiXaml Update="Pages\FrontPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Resources\Styles\OurStyles.xaml">
+	  <MauiXaml Update="Resources\Styles\LedgerStyles.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

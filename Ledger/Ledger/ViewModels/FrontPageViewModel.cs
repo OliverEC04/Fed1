@@ -23,7 +23,7 @@ namespace Ledger.ViewModels
 
 		public FrontPageViewModel()
 		{
-			Debtors = new ObservableCollection<Debtor>();
+			_debtors = new ObservableCollection<Debtor>();
 			LoadDebtorsAsync();
 		}
 
