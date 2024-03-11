@@ -32,8 +32,8 @@ namespace Ledger.ViewModels
 		{
 			if (_selectedDebtor != null)
 			{
-				await Application.Current.MainPage.Navigation.PushAsync(new AddDebtorPage());
-			}
+                await Application.Current.MainPage.Navigation.PushAsync(new DebtorListPage());
+            }
 		}
 
 		[RelayCommand]
@@ -56,6 +56,9 @@ namespace Ledger.ViewModels
 			{
 				Debtors.Add(debtor);
 			}
+		public FrontPageViewModel()
+        {
+            _debtors = new();
 		}
 	}
 }

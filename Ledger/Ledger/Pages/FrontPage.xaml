@@ -55,18 +55,7 @@
             VerticalOptions="Start"
             Text="Add debtor"
             FontSize="16"
-            BackgroundColor="#61AFEF" />
-
-        <Button
-            Grid.Column="1"
-            Grid.Row="1"
-            Margin="200"
-            Command="{Binding GoListCommand}"
-            WidthRequest="200"
-            HeightRequest="60"
-            VerticalOptions="Start"
-            Text="Add lister"
-            FontSize="16"
-            BackgroundColor="#61AFEF" />
+            BackgroundColor="#61AFEF"
+            />
     </Grid>
 </ContentPage>
