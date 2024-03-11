@@ -10,11 +10,13 @@
        HorizontalOptions="Center" />
 
         <Entry Placeholder="Name"
+               Text="{Binding Name}"
                FontSize="18"
                WidthRequest="1000"
                Margin="0"/>
 
         <Entry Placeholder="Initial value"
+               Text="{Binding InitialValue}"
                FontSize="18"
                WidthRequest="1000"
                Margin="0"/>
@@ -26,7 +28,8 @@
                     FontSize="36"
                     HorizontalOptions="Center"
                     WidthRequest="200"
-                    CornerRadius="10"/>
+                    CornerRadius="10"
+                    Command="{Binding SaveCommand}"/>
 
             <Button Text="Cancel"
                     Grid.Column="2"

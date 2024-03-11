@@ -1,11 +1,16 @@
+using System;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using System.Xml.Linq;
+using Ledger.Database; // This imports the namespace where your Database class is
+using Ledger.Models;
 
 namespace Ledger.ViewModels
 {
 	public partial class AddDebtorViewModel : ObservableObject
 	{
 		private readonly INavigation _navigation;
+		private readonly Ledger.Database.Database _database = new Ledger.Database.Database(); // Use the full namespace
 
 		[ObservableProperty]
 		private string name;
@@ -19,9 +24,16 @@ namespace Ledger.ViewModels
 		}
 
 		[RelayCommand]
-		public void Save()
+		public async void Save()
 		{
-			// Code for saving data
+			var debtor = new Debtor
+			{
+				Name = Name,
+				Debt = InitialValue
+			};
+
+			await _database.AddDebtor(debtor);
+			await _navigation.PopAsync();
 		}
 
 		[RelayCommand]
