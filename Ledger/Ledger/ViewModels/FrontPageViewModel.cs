@@ -17,6 +17,11 @@ namespace Ledger.ViewModels
 			await Application.Current.MainPage.Navigation.PushAsync(new AddDebtorPage()); // oh ja der kom jeg
 		}
 
+		[RelayCommand]
+		public async void GoList()
+		{
+			await Application.Current.MainPage.Navigation.PushAsync(new DebtorListPage());
+		}
 
 		public FrontPageViewModel()
 		{

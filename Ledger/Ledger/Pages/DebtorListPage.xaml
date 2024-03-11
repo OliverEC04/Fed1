@@ -1,31 +1,66 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="Ledger.Pages.DebtorListPage"
-    Title="DebtorListPage">
-    <VerticalStackLayout>
-        <!-- Add a button to go back to the main page -->
-        <!--<Button
-            Text="Back"
-            Clicked="OnBackButtonClicked"
-            Padding="40, 40, 40, 0"
-            FontSize="25"
-            />-->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Ledger.ViewModels"
+             x:Class="Ledger.Pages.DebtorListPage"
+             Title="Debtor Details">
 
-        <!-- Add a grid to hold info about the debtor -->
-        <Label
-            Text="Name of debtor" 
-            Padding="40, 0, 0, 40"
-            Style="{StaticResource TitleLabelStyle}"
-            />
-        <!--FontSize="25"-->
+    <VerticalStackLayout Spacing="10">
+        <Label Text="Here is Debtor:"
+               Padding="10"
+               FontSize="Large"
+               HorizontalOptions="Start" />
 
-        <Grid ColumnDefinitions="200, 200">
+        <Grid ColumnDefinitions="2*, *, *"
+              Padding="10"
+              BackgroundColor="#efefef">
+            <Label Text="Date"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center" />
+            <Label Text="Debit (+) / Credit (-)"
+                   Grid.Column="1"
+                   HorizontalOptions="End"
+                   VerticalOptions="Center" />
+        </Grid>
 
-            <Label Text="Date" Padding="40, 0, 0, 0" Style="{StaticResource LedgerText}"/>
-            <Label Text="Amount" Grid.Column="1" Padding="40, 0, 0, 0" Style="{StaticResource LedgerText}"/>
+        <ScrollView>
+            <StackLayout>
+                <CollectionView ItemsSource="{Binding DebtorDetails}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid ColumnDefinitions="2*, *, *"
+                  Padding="10">
+                                <Label Text="{Binding Date, StringFormat='{0:d}'}"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center" />
+                                <Label Text="{Binding Amount, StringFormat='{0:+0.00;-0.00}'}"
+                       Grid.Column="1"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
 
+            </StackLayout>
+        </ScrollView>
+
+        <Grid ColumnDefinitions="*, *"
+              Padding="10">
+            <Button Text="Add Debit/Credit"
+                    Command="{Binding AddTransactionCommand}"
+                    Grid.Column="0"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Center"
+                    BackgroundColor="Green"
+                    TextColor="White" />
+            <Button Text="Close"
+                    Command="{Binding CancelCommand}"
+                    Grid.Column="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Center"
+                    BackgroundColor="Red"
+                    TextColor="White" />
         </Grid>
 
     </VerticalStackLayout>
