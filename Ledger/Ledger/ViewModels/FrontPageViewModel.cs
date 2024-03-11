@@ -13,6 +13,18 @@ namespace Ledger.ViewModels
         private string _title = "Debtors";
         [ObservableProperty]
         private ObservableCollection<Debtor> _debtors;
+        [ObservableProperty]
+        private Debtor _selectedDebtor;
+
+        [RelayCommand]
+        public async Task SelDebtor()
+        {
+            if (_selectedDebtor != null)
+            {
+                await Application.Current.MainPage.Navigation.PushAsync(new AddDebtorPage());
+            }
+        }
+
 
         [RelayCommand]
         public async void AddDebtor()

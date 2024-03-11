@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:vm="clr-namespace:Ledger.ViewModels"
+    xmlns:models="clr-namespace:Ledger.Models"
     x:Class="Ledger.Pages.FrontPage"
     x:DataType="vm:FrontPageViewModel"
     Title="FrontPage">
@@ -19,12 +20,32 @@
             Grid.Column="0"
             Grid.Row="1">
             <ListView
+                SelectedItem="{Binding SelectedDebtor, Mode=TwoWay}"
                 ItemsSource="{Binding Debtors}">
+                <ListView.Behaviors>
+                    <toolkit:EventToCommandBehavior
+                        EventName="ItemTapped"
+                        Command="{Binding SelDebtorCommand}"
+                        CommandParameter="{Binding Source={RelativeSource AncestorType={x:Type ListView}}, Path=SelectedItem}" />
+                </ListView.Behaviors>
                 <ListView.ItemTemplate>
                     <DataTemplate
-                        x:DataType="Models:Debtor">
+                        x:DataType="models:Debtor">
+                        <ViewCell>
+                            <Grid
+                                ColumnDefinitions="*, *">
+                                <Label
+                                    Grid.Column="0"
+                                    Text="{Binding Name}"/>
+                                <Label
+                                    Grid.Column="1"
+                                    Text="{Binding Debt}"/>
+                            </Grid>
+                        </ViewCell>
                         <!--<TextCell
                             Text="{Binding Name}" />-->
+                        <!--<TextCell
+                            Text="{Binding Debt}" />-->
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
