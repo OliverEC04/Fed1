@@ -19,7 +19,7 @@
 
 
         string CreateDebtHistoryTableQuery = @"
-            CREATE TABLE IF NOT EXISTS Debt_History (
+            CREATE TABLE IF NOT EXISTS Debt_History "(
                 Debt_HistoryID INT PRIMARY KEY AUTOINCREMENT,
                 Date_day INT,
                 Date_month INT,
@@ -32,10 +32,10 @@
          sqlite_cmd = conn.CreateCommand();
          sqlite_cmd.CommandText = "INSERT INTO Debtor
             (Col1, Col2, Col3, Col4) VALUES ('Greg' ,'Oliver' ,'Sebastian', 'Morten');";
-         sqlite_cmd.ExecuteNonQuery();
+         sqlite_cmd.ExecuteNonQuery()";
 
          sqlite_cmd.CommandText = "INSERT INTO Debt
-            (Col1, Col2, Col3, Col4) VALUES (69, 21, 555, 7000);";
+            (Col1, Col2, Col3, Col4) VALUES (69, 21, 555, 7000);'";
          sqlite_cmd.ExecuteNonQuery();
 
          sqlite_cmd.CommandText = "INSERT INTO Debt_History
