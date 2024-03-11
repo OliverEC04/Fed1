@@ -39,8 +39,13 @@ namespace Ledger.ViewModels
 		}
 
 		public FrontPageViewModel()
-		{
-
+        {
+            _debtors = new();
+			_debtors.Add(new Debtor
+            {
+				Name = "Greg",
+				Debt = 420
+            });
 		}
 	}
 }

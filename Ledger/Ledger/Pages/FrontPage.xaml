@@ -36,16 +36,12 @@
                                 ColumnDefinitions="*, *">
                                 <Label
                                     Grid.Column="0"
-                                    Text="{Binding Name}"/>
+                                    Text="{Binding Name}" />
                                 <Label
                                     Grid.Column="1"
-                                    Text="{Binding Debt}"/>
+                                    Text="{Binding Debt}" />
                             </Grid>
                         </ViewCell>
-                        <!--<TextCell
-                            Text="{Binding Name}" />-->
-                        <!--<TextCell
-                            Text="{Binding Debt}" />-->
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
