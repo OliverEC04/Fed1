@@ -4,9 +4,9 @@ namespace Ledger.Pages;
 
 public partial class DebtorListPage : ContentPage
 {
-	public DebtorListPage()
+	public DebtorListPage(int debtorId)
 	{
 		InitializeComponent();
-		BindingContext = new DebtorListViewModel(Navigation);
+		BindingContext = new DebtorListViewModel(Navigation, new Ledger.Database.Database(), debtorId);
 	}
 }
