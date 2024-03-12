@@ -11,7 +11,7 @@ namespace Ledger.Models
 		public double Amount { get; set; }
 
 		[ForeignKey(nameof(Debtor))]
-		public int DebtorId { get; set; }  // Changed from DeptorID to DebtorId
+		public int DebtorId { get; set; }
 		public string Description { get; set; } = string.Empty;
 		public DateTime Date { get; set; }
 	}

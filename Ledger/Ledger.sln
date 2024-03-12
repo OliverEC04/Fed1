@@ -5,14 +5,6 @@ VisualStudioVersion = 17.10.34607.79
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ledger", "Ledger\Ledger.csproj", "{C92D7B18-6343-4985-8868-50A36A114F24}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{348C54E9-B1EB-40D8-87D4-13BE1EDD3E07}"
-	ProjectSection(SolutionItems) = preProject
-		DebtDate.cs = DebtDate.cs
-		DebtorDatabase.cs = DebtorDatabase.cs
-		Debtor.cs = Debtor.cs
-		DebtorAmount.cs = DebtorAmount.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
