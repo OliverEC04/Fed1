@@ -9,7 +9,7 @@
              Title="Debtor Details">
 
 	<VerticalStackLayout Spacing="10">
-		<Label Text="Here is Debtor:"
+		<Label Text="Debtor details"
 		       Padding="10"
 		       HorizontalOptions="Start"
 		       Style="{StaticResource TitleLabelStyle}" />
@@ -58,17 +58,15 @@
 			<Button Text="Add Debit/Credit"
 			        Command="{Binding AddTransactionCommand}"
 			        Grid.Column="0"
-			        HorizontalOptions="Fill"
 			        VerticalOptions="Center"
 			        BackgroundColor="Green"
-			        TextColor="White" />
+			        Style="{StaticResource Button1}" />
 			<Button Text="Close"
 			        Command="{Binding CancelCommand}"
 			        Grid.Column="1"
-			        HorizontalOptions="Fill"
 			        VerticalOptions="Center"
 			        BackgroundColor="Red"
-			        TextColor="White" />
+			        Style="{StaticResource Button1}" />
 		</Grid>
 
 	</VerticalStackLayout>
