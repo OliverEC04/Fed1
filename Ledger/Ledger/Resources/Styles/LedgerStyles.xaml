@@ -19,7 +19,7 @@
             Value="OpenSansRegular" />
         <Setter
             Property="FontSize"
-            Value="25" />
+            Value="28" />
         <Setter
             Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>

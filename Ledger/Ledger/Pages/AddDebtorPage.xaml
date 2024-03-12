@@ -5,8 +5,8 @@
              Title="AddDebtorPage">
 
     <VerticalStackLayout Spacing="35" Padding="100">
-        <Label Text="Add Deptor"
-       FontSize="104"
+        <Label Text="Add Debtor"
+       Style="{StaticResource TitleLabelStyle}"
        HorizontalOptions="Center" />
 
         <Entry Placeholder="Name"
@@ -25,18 +25,14 @@
 
             <Button Text="Save"
                     Grid.Column="1"
-                    FontSize="36"
                     HorizontalOptions="Center"
-                    WidthRequest="200"
-                    CornerRadius="10"
+                    Style="{StaticResource Button1}"
                     Command="{Binding SaveCommand}"/>
 
             <Button Text="Cancel"
                     Grid.Column="2"
-                    FontSize="36"
                     HorizontalOptions="Center"
-                    WidthRequest="200"
-                    CornerRadius="10"
+                    Style="{StaticResource Button1}"
                     Command="{Binding CancelCommand}"/>
         </Grid>
     </VerticalStackLayout>
