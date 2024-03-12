@@ -98,5 +98,8 @@
         <Setter
             Property="Padding"
             Value="10" />
+        <Setter
+            Property="TextColor"
+            Value="{StaticResource White}"/>
     </Style>
 </ResourceDictionary>
