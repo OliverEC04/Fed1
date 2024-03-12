@@ -40,11 +40,13 @@
 								      Padding="10">
 									<Label Text="{Binding Date, StringFormat='{0:d}'}"
 									       HorizontalOptions="Start"
-									       VerticalOptions="Center" />
+									       VerticalOptions="Center" 
+									       TextColor="{StaticResource White}"/>
 									<Label Text="{Binding Amount, StringFormat='{0:+0.00;-0.00}'}"
 									       Grid.Column="1"
 									       HorizontalOptions="End"
-									       VerticalOptions="Center" />
+									       VerticalOptions="Center"
+									       TextColor="{StaticResource White}"/>
 								</Grid>
 							</DataTemplate>
 						</CollectionView.ItemTemplate>
@@ -59,13 +61,15 @@
 			        Command="{Binding AddTransactionCommand}"
 			        Grid.Column="0"
 			        VerticalOptions="Center"
-			        BackgroundColor="Green"
+			        TextColor="{StaticResource White}"
+			        BackgroundColor="{StaticResource OdGreen}"
 			        Style="{StaticResource Button1}" />
 			<Button Text="Close"
 			        Command="{Binding CancelCommand}"
 			        Grid.Column="1"
 			        VerticalOptions="Center"
-			        BackgroundColor="Red"
+			        TextColor="{StaticResource White}"
+			        BackgroundColor="{StaticResource OdRed}"
 			        Style="{StaticResource Button1}" />
 		</Grid>
 
