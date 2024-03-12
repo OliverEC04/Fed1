@@ -60,6 +60,11 @@ namespace Ledger.ViewModels
 						Date = transactionDate
 					};
 
+					// Update total debt for debter
+					var debter = await _database.GetDebtor(_debtorId);
+					debter.Debt += newTransaction.Amount;
+					await _database.UpdateDebtor(debter);
+
 					// add to database
 					await _database.AddDebt(newTransaction);
 
