@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Ledger.Database
 {
-	internal class Database
+	public class Database
 	{
 		private readonly SQLiteAsyncConnection _connection;
 
